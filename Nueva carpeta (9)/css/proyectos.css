@@ -1,0 +1,692 @@
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+html,body{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.primercolor{
+    background-image: linear-gradient(to bottom,);
+}
+
+/*js con css para animar el texto con el scrool*/
+/*derecha*/
+.texto {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .mostrar {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+#Principal{
+    background-color: black;
+    height: 700px;
+    transition: background-color 0.3s ease;
+}
+.proyectosjava{
+    position: absolute;
+    top: 19%;
+    left: 9%;
+}
+.proyectosjava h1{
+    font-size: 7em;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+}
+.proyectosjava p{
+    font-size: 2em;
+    font-family: sans-serif;
+    color: red;
+}
+.flexprincipal{
+    display: flex;
+    justify-content: center;
+}
+
+.img-left{
+    background-image: url(/imglenguajes/java.png);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    left: 30%;
+    top: 60px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+.opacity{
+    opacity: 1;
+}
+
+
+/*regresar*/
+.regrsar{
+    position: fixed;
+    right: 0;
+    padding-right: 2em;
+    padding-top: 7em;
+    top: 0;
+    font-size: 10px;
+    font-family: sans-serif;
+    z-index: 9999;
+    color: black;
+}
+#h1reg{
+    transition: transform 0.3s ease;
+}
+#h1reg:hover{
+    transform: translateY(-10px);
+  }
+/*cominezo*/
+#cominezo{
+    padding-bottom: 15vh;
+}
+.palabras{
+    padding: 4em 2em;
+}
+.palabras h1{
+    font-size: 3em;
+    font-family: sans-serif;
+}
+.palabras p{
+    padding-top: 2em;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    width: 929px;
+    padding-left: 5em;
+}
+
+/*proyectos*/
+.proyeyecto1{
+   padding-left: 6em;
+}.proyeyecto1 h1{
+    font-size: 6em;
+    font-family: sans-serif;
+}
+.proyeyecto1 p{
+    font-size: 2em;
+    font-family: sans-serif;
+    color: #938A88;
+}
+.imgpr1 {
+ 
+    height: 90vh;
+    margin: 9vh 0;
+ 
+}
+  
+  .imgpr1 img {
+    width: 80%;
+    height: 90vh;
+    object-fit: cover;
+    float: right;
+}
+  
+.documentacion p{
+    padding-top: 1em;
+    font-size: 24px;
+    width: 900px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    padding-bottom: 5em;
+}
+.h1documentacion h1{
+    font-size: 4em;
+    font-family: sans-serif;
+    padding-bottom: 1em;
+    padding-left: 2em;
+   
+}
+
+
+/*versiones img*/
+.imgversiones img{
+    max-width: 500px;
+
+}
+.imgversiones{
+    display: flex;
+    justify-content: center;
+    margin:  0 auto;
+}
+#imgversiones{
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 6em;
+}
+.mostarimgversion{
+    opacity: 1;
+}
+
+.versiones{
+    padding-top: 4em;
+    padding-left: 6em;
+}
+
+.versionestexto h1{
+
+    font-size: 4em;
+    font-family: sans-serif;
+}
+#v{
+    font-size: 2em;
+    font-family: sans-serif;
+    color: #938A88;
+    padding-left: 1em;
+}
+.textoversiones p{
+    padding-top: 1em;
+    font-size: 24px;
+    width: 900px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    padding-bottom: 5em;
+}
+
+
+.provar {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-bottom: 5em;
+  }
+  
+  .provar button {
+    padding: 1em 2em;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .provar button::before {
+    content: ""; /* Contenido del pseudo-elemento (cadena vacía) */
+    position: absolute; /* Posición absoluta en relación al contenedor principal */
+    top: 0; /* Posición superior del pseudo-elemento */
+    left: 0; /* Posición izquierda del pseudo-elemento */
+    width: 100%; /* Ancho del pseudo-elemento (100% del contenedor principal) */
+    height: 100%; /* Altura del pseudo-elemento (100% del contenedor principal) */
+    background-color: black; /* Color de fondo del pseudo-elemento (rojo) */
+    transform: scaleX(0); /* Escala horizontal del pseudo-elemento (inicialmente 0) */
+    transform-origin: left; /* Origen de transformación del pseudo-elemento (izquierda) */
+    transition: transform 0.3s ease; /* Transición para la propiedad transform */
+    z-index: -1; /* Z-index para establecer la capa inferior */
+  }
+  
+  .provar button:hover {
+    color: white; /* Color de texto al pasar el cursor sobre el botón */
+  }
+  .provar button:hover::before {
+    transform: scaleX(1); /* Escala horizontal del pseudo-elemento a 1 en el hover */
+  }
+  
+  
+/*barra movible del lenguajes*/
+.textotecnologias h1{
+    text-align: center;
+    font-size: 3em;
+    font-family: sans-serif;
+}
+.textotecnologias p{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.strip-container {
+    overflow: hidden;
+    width: 100%;
+    height: 140px;
+  }
+  
+  .strip {
+    white-space: nowrap;
+    animation: strip-animation 15s linear infinite;
+  }
+  
+  .strip img {
+    display: inline-block;
+    width: 200px;
+    height: 120px;
+    padding: 0em 2em;
+  }
+
+  @keyframes strip-animation {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+/*proyectos2*/
+#proyecto2{
+    padding-top: 23em;
+}
+.proyeyecto2{
+  padding-right: 5em;
+ }.proyeyecto2 h1{
+    text-align: right;
+     font-size: 6em;
+     font-family: sans-serif;
+ }
+ .proyeyecto2 p{
+     font-size: 2em;
+     font-family: sans-serif;
+     color: #938A88;
+     text-align: right;
+ }
+ .imgpr2 {
+  
+     height: 90vh;
+     margin: 9vh 0;
+  
+ }
+   
+   .imgpr2 img {
+     width: 80%;
+     height: 90vh;
+     object-fit: cover;
+     float: left;
+ }
+   
+ .documentacion2 p{
+     padding-top: 1em;
+     font-size: 24px;
+     width: 900px;
+     margin: 0 auto;
+     font-family: sans-serif;
+     padding-bottom: 5em;
+ }
+ .h1documentacion2 h1{
+     font-size: 4em;
+     font-family: sans-serif;
+     padding-bottom: 1em;
+     padding-left: 2em;
+    
+ }
+
+ /*versiones img2*/
+.imgversiones2 img{
+    max-width: 500px;
+
+}
+.imgversiones2{
+    display: flex;
+    justify-content: center;
+    margin:  0 auto;
+}
+#imgversiones2{
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 6em;
+}
+.mostarimgversion{
+    opacity: 1;
+}
+
+.versiones2{
+    padding-top: 4em;
+    padding-left: 6em;
+}
+
+.versionestexto2 h1{
+
+    font-size: 4em;
+    font-family: sans-serif;
+}
+#v2{
+    font-size: 2em;
+    font-family: sans-serif;
+    color: #938A88;
+    padding-left: 1em;
+}
+.textoversiones2 p{
+    padding-top: 1em;
+    font-size: 24px;
+    width: 900px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    padding-bottom: 5em;
+}
+
+
+/*proyectos3*/
+#proyecto3{
+    padding-top: 23em;
+}
+.proyeyecto3{
+    padding-left: 6em;
+ }.proyeyecto3 h1{
+     font-size: 6em;
+     font-family: sans-serif;
+ }
+ .proyeyecto3 p{
+     font-size: 2em;
+     font-family: sans-serif;
+     color: #938A88;
+ }
+ .imgpr3 {
+  
+     height: 90vh;
+     margin: 9vh 0;
+  
+ }
+   
+   .imgpr3 img {
+     width: 80%;
+     height: 90vh;
+     object-fit: cover;
+     float: right;
+ }
+  
+ .documentacion3 p{
+     padding-top: 1em;
+     font-size: 24px;
+     width: 900px;
+     margin: 0 auto;
+     font-family: sans-serif;
+     padding-bottom: 5em;
+ }
+ .h1documentacion3 h1{
+     font-size: 4em;
+     font-family: sans-serif;
+     padding-bottom: 1em;
+     padding-left: 2em;
+    
+ }
+
+ /*versiones img3*/
+.imgversiones3 img{
+    max-width: 500px;
+
+}
+.imgversiones3{
+    display: flex;
+    justify-content: center;
+    margin:  0 auto;
+}
+#imgversiones3{
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 6em;
+}
+.mostarimgversion{
+    opacity: 1;
+}
+
+.versiones3{
+    padding-top: 4em;
+    padding-left: 6em;
+}
+
+.versionestexto3 h1{
+
+    font-size: 4em;
+    font-family: sans-serif;
+}
+#v3{
+    font-size: 2em;
+    font-family: sans-serif;
+    color: #938A88;
+    padding-left: 1em;
+}
+.textoversiones3 p{
+    padding-top: 1em;
+    font-size: 24px;
+    width: 900px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    padding-bottom: 5em;
+}
+
+
+
+
+
+/*proyectos4*/
+#proyecto4{
+    padding-top: 23em;
+}
+.proyeyecto4{
+  padding-right: 5em;
+ }.proyeyecto4 h1{
+    text-align: right;
+     font-size: 6em;
+     font-family: sans-serif;
+ }
+ .proyeyecto4 p{
+     font-size: 2em;
+     font-family: sans-serif;
+     color: #938A88;
+     text-align: right;
+ }
+ .imgpr4 {
+  
+     height: 90vh;
+     margin: 9vh 0;
+  
+ }
+   
+   .imgpr4 img {
+     width: 80%;
+     height: 90vh;
+     object-fit: cover;
+     float: left;
+ }
+   
+ .documentacion4 p{
+     padding-top: 1em;
+     font-size: 24px;
+     width: 900px;
+     margin: 0 auto;
+     font-family: sans-serif;
+     padding-bottom: 5em;
+ }
+ .h1documentacion4 h1{
+     font-size: 4em;
+     font-family: sans-serif;
+     padding-bottom: 1em;
+     padding-left: 2em;
+    
+ }
+
+ /*versiones img4*/
+.imgversiones4 img{
+    max-width: 500px;
+
+}
+.imgversiones4{
+    display: flex;
+    justify-content: center;
+    margin:  0 auto;
+}
+#imgversiones4{
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 6em;
+}
+.mostarimgversion{
+    opacity: 1;
+}
+
+.versiones4{
+    padding-top: 4em;
+    padding-left: 6em;
+}
+
+.versionestexto4 h1{
+
+    font-size: 4em;
+    font-family: sans-serif;
+}
+#v4{
+    font-size: 2em;
+    font-family: sans-serif;
+    color: #938A88;
+    padding-left: 1em;
+}
+.textoversiones4 p{
+    padding-top: 1em;
+    font-size: 24px;
+    width: 900px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    padding-bottom: 5em;
+}
+
+
+/*cartas*/
+#proyectoscartas{
+    height: 600px;
+    width: 100%;
+    background-color: black;
+    position: relative; 
+}
+.textoh1cartas h1{
+    margin-left: 1em;
+    font-size: 70px;
+    font-family: sans-serif;
+    color: white;
+ 
+}
+.flexcartas{
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Ajusta el espacio entre las cartas */
+    transform: translate(-0%, 40%);
+    z-index: 999999;
+    position: relative;
+}
+.cartas1.grande {
+  transform: scale(1.1); /* Carta más grande */
+  
+}
+.cartas1.grande:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra para resaltar el efecto */
+ 
+}
+.cartas1.pequeña {
+  transform: scale(0.9); /* Carta más pequeña */
+  margin: 0;
+
+  
+ 
+}
+.cartas1.pequeña:hover {
+  transform: scale(1);
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra para resaltar el efecto */
+}
+.cartas1:hover{
+     transform: scale(1.1); /* Aplica la transformación en hover */
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra para resaltar el efecto */
+    
+}
+#proyectoscartas{
+    margin: 3em 0em;
+}
+.cartas1 {
+   background-color: black;
+   width: 400px;
+   border-radius: 15px;
+   perspective: 1000px; /* Establece la perspectiva */
+   transition: transform 0.5s; /* Agrega una transición suave */
+   z-index: 9999;
+}
+.imgcartas{
+    background-image: linear-gradient(to left, transparent 1%, black) ;
+    background-color: rgba(0, 0, 0, 0.5); /* Un color negro semitransparente */
+    background-blend-mode: multiply; /* Mezcla la imagen y el color de fondo */ 
+    height: 100%;
+    width: 655px;
+    position: absolute;
+    right: 0;
+    top: 0; 
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.imgcartas.hidden {
+    opacity: 1;
+}
+
+.cartas1 h1{
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 1em;
+    color: white;
+}
+.cartas1 p{
+    margin: 1em 2em;
+    font-family: sans-serif;
+    color: white;
+}
+
+
+.cartas1 button{
+    padding: 1em 2em;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin:  0 auto;
+    display: flex;
+    margin-bottom: 4em;
+    color: white;
+
+}
+ .cartas1 button::before {
+    content: ""; /* Contenido del pseudo-elemento (cadena vacía) */
+    position: absolute; /* Posición absoluta en relación al contenedor principal */
+    top: 0; /* Posición superior del pseudo-elemento */
+    left: 0; /* Posición izquierda del pseudo-elemento */
+    width: 100%; /* Ancho del pseudo-elemento (100% del contenedor principal) */
+    height: 100%; /* Altura del pseudo-elemento (100% del contenedor principal) */
+    background-color: white; /* Color de fondo del pseudo-elemento (rojo) */
+    transform: scaleX(0); /* Escala horizontal del pseudo-elemento (inicialmente 0) */
+    transform-origin: left; /* Origen de transformación del pseudo-elemento (izquierda) */
+    transition: transform 0.3s ease; /* Transición para la propiedad transform */
+    z-index: -1; /* Z-index para establecer la capa inferior */
+  }
+  
+    .cartas1 button:hover {
+    color: black; /* Color de texto al pasar el cursor sobre el botón */
+  }
+    .cartas1 button:hover::before {
+    transform: scaleX(1); /* Escala horizontal del pseudo-elemento a 1 en el hover */
+  }
+  
+
+
