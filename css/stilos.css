@@ -4,6 +4,13 @@
     box-sizing: border-box;
     color: white;
 }
+.redessec1,.seccionpantallas{
+  display: none;
+}
+
+a{
+  text-decoration: none;
+}
 body,html{
     height: 100%;
     background-color: black;
@@ -12,6 +19,7 @@ body,html{
 .part8,.part7,.part6,.part5,.part4,.part3,.part2{
     padding: 2em 0em;
 }
+
 .primeramarte{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1) 90%), url("https://i.pinimg.com/564x/ca/27/35/ca27350641aef732ef8431c15c84bf20.jpg");    background-size: cover;
     background-position: center;
@@ -31,6 +39,7 @@ body,html{
     left: 10px;
     font-family: sans-serif;
     display: flex;
+    z-index: 999999;
 
 }
 .invertire{
@@ -49,30 +58,74 @@ body,html{
     width: 30px;
     margin: 5px 10px;
     border-radius: 20px;
+    transition: all 300ms;
+    transform-origin: 0px 100%;
+    z-index: 9999;
+
+}
+.br1.activado {
+  transform: rotate(45deg) translate(-8px, 1px);
+  border-radius: 20px;
+}
+.br2.activado {
+  transform: rotate(-45deg) translate(-7px, 2px);
+  border-radius: 20px;
+}
+.br3.activado {
+  opacity: 0;
+  margin-right: -30px;
+
+}
+.apartadosmenu2{
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+.contenido{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%);
+  top: 20%;
+}
+.contenido h1{
+  padding: .5em ;
+  color: white;
+  font-family: sans-serif;
 }
 .texto{
     position: relative;
-    top: 6em;
+    top:11em;
     display: flex;
     justify-content: center;
     width: 100%;
 }
-.texto h1{
-    font-family: sans-serif;
-    font-size: 10vw;
-    color: white;
-
+.texto h1 {
+  font-family: sans-serif;
+  font-size: 85px;
+  color: white;
 }
-.texto p{
-    color: white;
-    position: absolute;
-    top:5em;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: sans-serif;
-    font-size: 15px;
-    text-align: center;
-
+.textoeventos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.texto p {
+  color: white;
+  position: absolute;
+  top: 8em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center;
 }
 .padreimg{
     position: relative;
@@ -97,8 +150,9 @@ body,html{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-   
-
+}
+.imgcontainer700px{
+  display: none;
 }
 .imagenes img{
     max-width: 100px;
@@ -296,11 +350,9 @@ body,html{
     transform: scale(1.2);
   }
 
-
 .textogeneral h1{
     color: white;
     text-align: center;
-    padding-top: 3em;
     font-family: sans-serif;
 }  
 
@@ -367,12 +419,37 @@ body,html{
     background-color: rgba(0, 0, 0, 0.8);
    transform: scale(1.1);
 }
+.cartas3{
+  background-image: url(https://i.pinimg.com/564x/22/2c/e6/222ce6b9a572ab8791cbbd9a85ec583b.jpg);
+}
+.cartas4{
+  background-image: url(https://i.pinimg.com/564x/ce/f8/e8/cef8e8926bf4940ddc40ff13f77b1d51.jpg);
+}
+.cartas5{
+  background-image: url(https://i.pinimg.com/564x/2d/86/b0/2d86b0c933321d7fe731c7025a79769d.jpg);
+}
+.cartas6{
+  background-image: url(https://i.pinimg.com/564x/45/15/a0/4515a0020b12bd94276c628c1c3de49a.jpg);
+}
+.cartas7{
+  background-image: url(https://i.pinimg.com/564x/ad/ad/cb/adadcbce10a939cb9273e6c9386899c4.jpg);
+}
+.cartas8{
+  background-image: url(https://i.pinimg.com/564x/f3/61/1c/f3611ca1a3da0ca6b14c8c1a0a753d45.jpg);
+}
+.flexclientes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .centrarcleintes{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1em 0em;
+    max-width: 500px;
 }
 .clientes{
     width: 90%;
@@ -450,4 +527,280 @@ body,html{
     padding-left: .6em;
     font-family: sans-serif;
     font-size: 50px;
+    
 }
+.facebbok h1{
+  font-size: 10px;
+    font-family: sans-serif;
+    padding-left: 1.6em;
+  padding-bottom: 1em;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.whatsapp h1{
+  font-size: 10px;
+    font-family: sans-serif;
+    padding-left: 1.6em;
+  padding-bottom: 1em;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.instagram h1{
+   font-size: 10px;
+    font-family: sans-serif;
+    padding-left: 1.6em;
+    padding-bottom: 1em;
+    transition: opacity 0.3s ease;
+    opacity:0;
+}
+.scrool{
+  display: none;
+}
+.imgscrool{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.imgscrool img{
+  width: 100%;
+}
+.img1{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+}
+.img1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent); /* Ajusta el color y la opacidad del sombreado */
+  z-index: -1;
+}
+@media screen and (min-width:400px){
+  .imagenes {
+    margin: 0em 1em;
+}
+}
+@media screen and (min-width:760px){
+
+  .texto p {
+    top: 7em;
+    font-size: 15px;
+}
+.texto {
+  top: 13em;
+}
+.texto h1 {
+  font-family: sans-serif;
+  font-size: 100px;
+  color: white;
+}
+.info h1 {
+  font-size: 40px;
+
+}
+.info p {
+  margin: 1em 7em;
+}
+.cartas {
+  width: 80%;
+ 
+}
+.cartas2 {
+  width: 80%;
+}
+.reservaciones h1 {
+  padding-bottom: 1em;
+  font-size: 55px;
+  padding-left: .5em;
+}
+.reservaciones2 {
+  max-width: 613px;
+}
+.centrarreservaciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.textogeneral h1 {
+  color: white;
+  text-align: center;
+  padding-top: 1em;
+  font-family: sans-serif;
+  font-size: 40px;
+  padding-bottom: 1em;
+}
+.clientes {
+  width: 80%;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+.part8{
+  padding-left: 2em;
+}
+.imgcontainer700px{
+  display: block;
+}
+
+.textoeventos h1 {
+  padding-top: 2em;
+  font-size: 40px;
+  color: white;
+  font-family: sans-serif;
+  padding-bottom: 1em;
+}
+}
+
+@media screen and (min-width:1000px){
+  .menu,.logo{display: none;}
+  .imagenes {
+
+    margin: 0em 5em;
+}
+  .texto {
+    top: 2em;
+  }
+  .texto p {
+    top: 7.5em;
+}
+  .padreimg {
+  top: 10%;
+  }
+  .poscionimg {
+  top: 10%;
+  }
+  .info p {
+    margin: 1em 13em;
+}
+.eventos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.cartas {
+  margin: 1em 1em;
+  width: 500px;
+}
+.cartas2 {
+  margin: 0em 1em;
+  width: 500px;
+}
+
+
+
+.contact{
+  display: flex;
+  justify-content: center;
+}
+.horarios h1 {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: white;
+  padding-top: 1em;
+}
+.hojoimg3{
+  margin: 0em 2em;
+}
+}
+
+@media screen and (min-width:1450px){
+  .texto h1 {
+    font-family: sans-serif;
+    font-size: 180px;
+    color: white;
+    padding-left: 1vw;
+}
+  .texto{
+   right: 34vw;
+   top: 16vw;
+  }
+  .texto p {
+    top: 10.5em;
+    font-size: 20px;
+  }
+  .imagenes {
+    margin: 0em 2em;
+}
+  .poscionimg{
+    position: absolute;
+    top: 71.5vh;
+    right: 1px;
+  }
+  .padreimg {
+    position: absolute;
+    top: 63%;
+    right: 0;
+  margin-right: 12em;
+}
+.seccionpantallas{
+  position: absolute;
+  top: 0;
+  display: flex;
+  margin: 0em 2em;
+}
+.seccionpantallas h1{
+  margin: 1em .8em;
+  font-size: 20px;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.seccionpantallas h1:hover{
+  transform: translateY(-10px);
+}
+.imgcontainer700px{
+  display: none;
+}
+
+.redessec1{
+  display: flex;
+  position: absolute;
+  bottom: 4em;
+  margin-left: 2em;
+
+}
+.redessec1 img{
+  max-width: 40px;
+  margin: 0em 1em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.redessec1 img:hover{
+  transform: translateY(-5px);
+}
+.primeramarte {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1) 90%), url(https://img.freepik.com/foto-gratis/maravillosa-mesa-boda-restaurante-increible_8353-9875.jpg?w=1380&t=st=1687926730~exp=1687927330~hmac=3abf72f1e58800ec7c3dcc5847e949e7811854eb01e64b3acc85f51ab8fbc70d);
+}
+.info h1 {
+  font-size: 60px;
+}
+.info p {
+  font-size: 20px;
+}
+.hojoimg3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0em 5em;
+}
+.star {
+    margin: 0.2em 2px;
+}
+.scrool{
+  display: none;
+}
+}
+

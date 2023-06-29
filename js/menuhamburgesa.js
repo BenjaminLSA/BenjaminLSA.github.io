@@ -65,5 +65,4 @@ redes.addEventListener('click',function(){
   l1.classList.remove("active");
   l2.classList.remove("active");
   l3.classList.remove("active");
- 
 });
